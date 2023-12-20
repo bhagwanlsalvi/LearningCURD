@@ -11,4 +11,9 @@ public partial class Contact : Page
     {
 
     }
+
+    protected void BtnCreate_Click(object sender, EventArgs e)
+    {
+
+    }
 }

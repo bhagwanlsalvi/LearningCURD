@@ -65,12 +65,17 @@ public partial class _Default : Page
             Response.Write(" < script > alert('plase  Insert Data!!') </ script >");
         }
         db.Close();
+        Clear();
+        BindListView();
+    }
+
+    public void Clear()
+    {
         txtfName.Text = "";
         txtlName.Text = "";
         txtmName.Text = "";
         txtmathername.Text = "";
         txtfathername.Text = "";
-        BindListView();
     }
 
     protected void ListView1_ItemCommand(object sender, ListViewCommandEventArgs e)
@@ -117,11 +122,7 @@ public partial class _Default : Page
                 Response.Write(" < script > alert('plase  Insert Data!!') </ script >");
             }
             db.Close();
-            txtfName.Text = "";
-            txtlName.Text = "";
-            txtmName.Text = "";
-            txtmathername.Text = "";
-            txtfathername.Text = "";
+            Clear();
             BindListView();
         }
         if (e.CommandName == "Active")
@@ -196,11 +197,7 @@ public partial class _Default : Page
                 Response.Write(" < script > alert('plase  Insert Data!!') </ script >");
             }
             db.Close();
-            txtfName.Text = "";
-            txtlName.Text = "";
-            txtmName.Text = "";
-            txtmathername.Text = "";
-            txtfathername.Text = "";
+            Clear();
             BindListView();
             btnUpdate.Visible = false;
             btnCreate.Visible = true;
